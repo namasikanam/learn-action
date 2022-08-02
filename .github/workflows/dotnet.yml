@@ -3,7 +3,7 @@ name: .NET
 on: [push]
 
 jobs:
-  build:
+  Build-and-Run:
   
     runs-on: ubuntu-latest
     
