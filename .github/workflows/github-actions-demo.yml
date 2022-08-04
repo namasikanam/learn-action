@@ -31,21 +31,13 @@ jobs:
           STATUS: ${{ steps.date.outputs.data }}
           COLOR: 00EEFF
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - id: color
+        run: echo "##[set-output name=color;]$([ '100' == '100' ] && echo '00A' || echo '0A0')"
       - name: Custom Icon
-        if: ${{ env.x == 5 }}
         uses: RubbaBoy/BYOB@v1.3.0
         with:
           NAME: custom
           ICON: 'https://raw.githubusercontent.com/RubbaBoy/BYOBTest/master/icons/dollar.svg'
           STATUS: 'Custom Icons'
-          COLOR: 00A
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Custom Icon
-        if: ${{ env.x != 5 }}
-        uses: RubbaBoy/BYOB@v1.3.0
-        with:
-          NAME: custom
-          ICON: 'https://raw.githubusercontent.com/RubbaBoy/BYOBTest/master/icons/dollar.svg'
-          STATUS: 'Custom Icons'
-          COLOR: 0A0
+          COLOR: ${{ steps.color.outputs.color }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
