@@ -1,3 +1,3 @@
 # learn-action
 
-![Score Calculator](https://byob.yarr.is/thufv/CMinor/score)
+![Score Calculator](https://byob.yarr.is/namasikanam/learn-action/custom)
