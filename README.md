@@ -1,3 +1,3 @@
 # learn-action
 
-![](https://byob.yarr.is/namasikanam/learn-action/time)
+![Score Calculator](https://byob.yarr.is/thufv/CMinor/score)
